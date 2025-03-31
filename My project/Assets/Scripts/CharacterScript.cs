@@ -2,8 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Mirror;
 
-public class CharacterScript : MonoBehaviour
+public class CharacterScript : NetworkBehaviour
 {
 
     [SerializeField]
@@ -24,7 +25,9 @@ public class CharacterScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -35,6 +38,8 @@ public class CharacterScript : MonoBehaviour
 
     private void OnMovement(InputValue value)
     {
+
+
         movement = value.Get<Vector2>();
         if (movement.x != 0 || movement.y != 0)
         {
@@ -49,6 +54,7 @@ public class CharacterScript : MonoBehaviour
         }
     }
 
+    [Client]
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
