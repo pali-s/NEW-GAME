@@ -4,6 +4,12 @@ using Mirror;
 public class NetworkManagerLobby : NetworkRoomManager
 {
 
+    [SerializeField] private GameObject malePlayer;
+    [SerializeField] private GameObject femalePlayer;
+
+    public int playerIndex;
+
+
     // This will be called when a new player joins the lobby
     public override void OnServerConnect(NetworkConnectionToClient conn)
     {
@@ -14,7 +20,7 @@ public class NetworkManagerLobby : NetworkRoomManager
         Debug.Log(numPlayers);
 
         // Determine which player is joining (based on the connection)
-        int playerIndex = numPlayers; // This will be 0 for Player 1, 1 for Player 2, etc.
+        playerIndex = numPlayers; // This will be 0 for Player 1, 1 for Player 2, etc.
 
         // Activate the respective player object based on playerIndex
         if (playerIndex == 0)
@@ -47,4 +53,5 @@ public class NetworkManagerLobby : NetworkRoomManager
             player2.gameObject.SetActive(false);
         }
     }
+
 }

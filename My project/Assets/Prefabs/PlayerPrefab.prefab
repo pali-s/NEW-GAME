@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8925202333955724207}
   - component: {fileID: 5382076131449696150}
   m_Layer: 0
-  m_Name: NewPlayer
+  m_Name: PlayerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: -7188029369702811385, guid: e47301ae1952f8a42a3e9c3b626a3857, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &2809565634023894159
@@ -158,6 +158,10 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  maleSprite: {fileID: -7188029369702811385, guid: e47301ae1952f8a42a3e9c3b626a3857, type: 3}
+  femaleSprite: {fileID: -7186546136376424486, guid: ca901900efff0344bbf79574708ae26c, type: 3}
+  maleAnimator: {fileID: 9100000, guid: 91477a07517ce324985568fcb9ef6772, type: 2}
+  femaleAnimator: {fileID: 9100000, guid: e755d8d00ca79574f9433b6d0b98b449, type: 2}
   speed: 5
 --- !u!114 &7478279200979468079
 MonoBehaviour:
