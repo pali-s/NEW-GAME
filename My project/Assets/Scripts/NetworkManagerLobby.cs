@@ -4,9 +4,6 @@ using Mirror;
 public class NetworkManagerLobby : NetworkRoomManager
 {
 
-    [SerializeField] private GameObject malePlayer;
-    [SerializeField] private GameObject femalePlayer;
-
     public int playerIndex;
 
 
